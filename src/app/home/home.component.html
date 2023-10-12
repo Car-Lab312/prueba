@@ -1,0 +1,18 @@
+  <h1>Informacion de pais</h1>
+  <div *ngIf="data">
+  <table border="1" style="background-color: blue; border-color: black; color: aliceblue; border-radius: 3%;">
+      <tr>
+          <th>Nombre del pais</th>
+          <th>Capital</th>
+          <th>Imagen pais</th>
+          <th>Accion</th>
+      </tr>
+      <tr>
+          <td *ngFor="let item of data">{{ item.name.common}}</td>
+          <td *ngFor="let item of data">{{ item.capital }}</td>
+          <td><img [src]="ObjetoImg.imagen" alt=""></td>
+          <td><button> Mas detalles</button></td>
+      </tr>
+  </table>
+</div>
+
